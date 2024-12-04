@@ -1,9 +1,12 @@
 package day12;
 
 import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,6 +32,7 @@ public class HandleAlerts {
 //		Alert myalert = driver.switchTo().alert();
 //		System.out.println(myalert.getText());
 //		myalert.accept();
+	
 		
 //		// 2) confirmation alert - ok and cancel
 //		// click on JS confirm button
@@ -47,7 +51,7 @@ public class HandleAlerts {
 //		myalert3.accept();
 		
 //		// handle alert without using switchTo().alert()
-//		// By using explicit wait
+//		// handle alert By using explicit wait
 //		//1) click on JS alert ( Normal Alert with OK button ) 
 //		//   declare explicit wait  
 //		WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -57,6 +61,14 @@ public class HandleAlerts {
 //	    Alert myalert =	myWait.until(ExpectedConditions.alertIsPresent()); // capture alert
 //		System.out.println(myalert.getText());
 //		myalert.accept();
+		
+		// Alert handle by JavascriptExecutor
+		//1) click on JS alert ( Normal Alert with OK button ) 
+		driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
+		Thread.sleep(2000);
+		JavascriptExecutor scriptAlert = (JavascriptExecutor) driver;
+		scriptAlert.executeScript("window.alert=function{}");
+		
 	
 		
 		

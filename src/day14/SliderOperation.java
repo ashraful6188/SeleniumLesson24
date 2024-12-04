@@ -20,16 +20,16 @@ public class SliderOperation {
 		// launching web page
 		driver.get("https://www.jqueryscript.net/demo/Price-Range-Slider-jQuery-UI/#google_vignette");
 		WebElement min_slider = driver.findElement(By.xpath("//span[contains(@style, 'left: 0%')]"));
-		System.out.println(min_slider.getLocation());// (59, 249)
+		System.out.println(min_slider.getLocation());// (59, 287)
 		
 		Actions act = new Actions(driver);
 		//slide the min slider
-		act.dragAndDropBy(min_slider, 100, 249).perform();
+		act.dragAndDropBy(min_slider, 100, 287).perform();
 		System.out.println("Location after slideing minimum"+min_slider.getLocation());
 		// slide the maximum
 		WebElement max_slider = driver.findElement(By.xpath("//span[contains(@style, 'left: 100%;')]"));
-		System.out.println(max_slider.getLocation());//(612, 249)
-		act.dragAndDropBy(max_slider, 134, 249);
+		System.out.println(max_slider.getLocation());//(612, 287)
+		act.dragAndDropBy(max_slider, -100, 287).perform();
 		System.out.println("Location after slideing maximum"+max_slider.getLocation());
 		
 		

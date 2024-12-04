@@ -19,8 +19,8 @@ public class CheckBoxesDemo {
 		// launching the application
 		driver.get("https://testautomationpractice.blogspot.com/");
 
-//		// select only one specific element		
-//		   driver.findElement(By.xpath("//input[@id='sunday']")).click();
+		// select only one specific element		
+//		  driver.findElement(By.xpath("//input[@id='sunday']")).click();
 
 		// find out total number of check box
 		List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox'and contains(@id,'day')]"));
@@ -39,7 +39,7 @@ public class CheckBoxesDemo {
 //		}
 		
 //		// select last two checkbox
-//		// total number of checlboxes- how many checkboxes want to select = stating index
+//		// total number of checkboxes- how many checkboxes want to select = stating index
 //		// 7-2=5 (stating index)
 //		for(int i=5; i<checkboxes.size();i++) {
 //			checkboxes.get(i).click();

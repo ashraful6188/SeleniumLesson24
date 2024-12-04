@@ -19,9 +19,10 @@ public class FiledInteraction {
 		WebElement searchBox = driver.findElement(By.name("q"));
 		searchBox.sendKeys("Olympic 2024");
 		searchBox.sendKeys(Keys.ENTER);
-		// searchBox.click()
+		//searchBox.sendKeys(Keys.RETURN);
+		
 
-		driver.close();
+		//driver.close();
 
 	}
 

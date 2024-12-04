@@ -22,7 +22,7 @@ public class ExplicitWaitDemo {
 //		FluentWait<WebDriver> myWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		// launching the application
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		// use of expilicit wait
+		// use of explicit wait
 		WebElement username = myWait
 		.until(ExpectedConditions.visibilityOfElementLocated(By
 		.xpath("//input[@name='username']")));

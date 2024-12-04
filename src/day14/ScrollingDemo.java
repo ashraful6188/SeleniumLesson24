@@ -30,12 +30,12 @@ public class ScrollingDemo {
 		// type cast
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		// scrolling by pixel
-//		js.executeScript("window.scrollBy(0, 800)","");
+		js.executeScript("window.scrollBy(0, 800)");
 
-		// scroll to an element
-		WebElement targetElement = driver
-				.findElement(By.xpath("//body//div[@id='__next']//div//div[2]//div[1]//a[1]//div[2]//img[1]"));
-		js.executeScript("arguments[0].scrollIntoView();", targetElement);
+//		// scroll to an element
+//		WebElement targetElement = driver
+//				.findElement(By.xpath("//body//div[@id='__next']//div//div[2]//div[1]//a[1]//div[2]//img[1]"));
+//		js.executeScript("arguments[0].scrollIntoView();", targetElement);
 
 //		// scroll to the end of the page
 //		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");

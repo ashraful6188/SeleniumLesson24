@@ -1,9 +1,9 @@
 package day11;
 
 import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class ImplicitWaitDemo {
@@ -16,6 +16,8 @@ public class ImplicitWaitDemo {
 		driver.manage().window().maximize();
 		// page load timeout
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		// Delete all cookies
+		driver.manage().deleteAllCookies();
 		// adding implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		// launching the application

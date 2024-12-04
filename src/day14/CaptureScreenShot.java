@@ -25,17 +25,17 @@ public class CaptureScreenShot {
  //    	driver.get("https://www.target.com/");
 		driver.get("https://www.wikipedia.org/");
 
-		// full page screenshot
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File srcFile = ts.getScreenshotAs(OutputType.FILE);
-		File targetFile = new File("D:\\Automation24\\SeleniumLesson24\\Screenshot\\image.png");	
-		srcFile.renameTo(targetFile);
+//		// full page screenshot
+//		TakesScreenshot ts = (TakesScreenshot) driver;
+//		File srcFile = ts.getScreenshotAs(OutputType.FILE);
+//		File targetFile = new File("D:\\Automation24\\SeleniumLesson24\\Screenshot\\image.png");	
+//		srcFile.renameTo(targetFile);
 		
-//		// capture the screenshot of a single element
-//		WebElement targetEle = driver.findElement(By.xpath("//nav[@aria-label='Top languages']"));
-//		File src = targetEle.getScreenshotAs(OutputType.FILE);
-//		File dstn = new File("D:\\Automation24\\SeleniumLesson24\\Screenshot\\wiki.png");
-//		src.renameTo(dstn);
+		// capture the screenshot of a single element
+		WebElement targetEle = driver.findElement(By.xpath("//nav[@aria-label='Top languages']"));
+		File src = targetEle.getScreenshotAs(OutputType.FILE);
+		File dstn = new File("D:\\Automation24\\SeleniumLesson24\\Screenshot\\wiki.png");
+		src.renameTo(dstn);
 		
 		
 

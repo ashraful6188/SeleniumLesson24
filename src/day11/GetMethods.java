@@ -1,5 +1,6 @@
 package day11;
 
+import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -17,6 +18,10 @@ public class GetMethods {
 	WebDriver driver = new FirefoxDriver();// it would launch firefox browser
 	// maximize the window
 	driver.manage().window().maximize();
+	// Add implicit wait
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	// delete all cookies
+	driver.manage().deleteAllCookies();
 	// launching the application
  //	driver.get("https://demo.opencart.com/");
 	driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
